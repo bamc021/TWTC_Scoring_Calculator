@@ -42,173 +42,173 @@ def recalculate_points():
     
 #------------------------------------------------------------------------------
 
-#-----------Function to assign point values based on chosen template-----------
-def points_template():
-    if scoringtemplate == "2024 TWTC":
-        hitter_hits.value = 0
-        hitter_singles.value = 1
-        hitter_doubles.value = 2
-        hitter_triples.value = 3
-        hitter_homeruns.value = 5
-        hitter_runs.value = 1
-        hitter_rbi.value = 1
-        hitter_walks.value = 1
-        hitter_ks.value = -1
-        hitter_hbp.value = 1
-        hitter_sacfly.value = 0
-        hitter_sachit.value = 0
-        hitter_sb.value = 2
-        hitter_cs.value = -2
-        hitter_ab.value = 0
+# #-----------Function to assign point values based on chosen template-----------
+# def points_template():
+#     if scoringtemplate == "2024 TWTC":
+#         hitter_hits.value = float(0)
+#         hitter_singles.value = float(1)
+#         hitter_doubles.value = float(2)
+#         hitter_triples.value = float(3)
+#         hitter_homeruns.value = float(5)
+#         hitter_runs.value = float(1)
+#         hitter_rbi.value = float(1)
+#         hitter_walks.value = float(1)
+#         hitter_ks.value = float(-1)
+#         hitter_hbp.value = float(1)
+#         hitter_sacfly.value = float(0)
+#         hitter_sachit.value = float(0)
+#         hitter_sb.value = float(2)
+#         hitter_cs.value = float(-2)
+#         hitter_ab.value = float(0)
         
-        pitcher_wins.value = 7
-        pitcher_losses.value = -3
-        pitcher_qs.value = 5
-        pitcher_cg.value = 10
-        pitcher_sho.value = 0
-        pitcher_saves.value =3 
-        pitcher_holds.value = 2
-        pitcher_blown.value = -3
-        pitcher_innings.value = 1
-        pitcher_hits.value = 0
-        pitcher_er.value = -1
-        pitcher_homeruns.value = -2
-        pitcher_walks.value = -1
-        pitcher_hbp.value = 0
-        pitcher_ks.value = 1
+#         pitcher_wins.value = float(7)
+#         pitcher_losses.value = float(-3)
+#         pitcher_qs.value = float(5)
+#         pitcher_cg.value = float(10)
+#         pitcher_sho.value = float(0)
+#         pitcher_saves.value = float(3)
+#         pitcher_holds.value = float(2)
+#         pitcher_blown.value = float(-3)
+#         pitcher_innings.value = float(1)
+#         pitcher_hits.value = float(0)
+#         pitcher_er.value = float(-1)
+#         pitcher_homeruns.value = float(-2)
+#         pitcher_walks.value = float(-1)
+#         pitcher_hbp.value = float(0)
+#         pitcher_ks.value = float(1)
         
-    elif scoringtemplate == "Standard Fantrax":
-        hitter_hits.value = 0
-        hitter_singles.value = 1
-        hitter_doubles.value = 2
-        hitter_triples.value = 3
-        hitter_homeruns.value = 4
-        hitter_runs.value = 1
-        hitter_rbi.value = 1
-        hitter_walks.value = 1
-        hitter_ks.value = 0
-        hitter_hbp.value = 1
-        hitter_sacfly.value = 0
-        hitter_sachit.value = 0
-        hitter_sb.value = 2
-        hitter_cs.value = 0
-        hitter_ab.value = 0
+#     elif scoringtemplate == "Standard Fantrax":
+#         hitter_hits.value = float(0))
+#         hitter_singles.value = float(1)
+#         hitter_doubles.value = float(2)
+#         hitter_triples.value = float(3)
+#         hitter_homeruns.value = float(4)
+#         hitter_runs.value = float(1)
+#         hitter_rbi.value = float(1)
+#         hitter_walks.value = float(1)
+#         hitter_ks.value = float(0)
+#         hitter_hbp.value = float(1)
+#         hitter_sacfly.value = float(0)
+#         hitter_sachit.value = float(0)
+#         hitter_sb.value = float(2)
+#         hitter_cs.value = float(0)
+#         hitter_ab.value = float(0)
         
-        pitcher_wins.value = 10
-        pitcher_losses.value = -5
-        pitcher_qs.value = 3
-        pitcher_cg.value = 0
-        pitcher_sho.value = 0
-        pitcher_saves.value = 7
-        pitcher_holds.value = 0
-        pitcher_blown.value = 0
-        pitcher_innings.value = 1
-        pitcher_hits.value = 0
-        pitcher_er.value = -1
-        pitcher_homeruns.value = 0
-        pitcher_walks.value = 0
-        pitcher_hbp.value = 0
-        pitcher_ks.value = 1
+#         pitcher_wins.value = float(10)
+#         pitcher_losses.value = float(-5)
+#         pitcher_qs.value = float(3)
+#         pitcher_cg.value = float(0)
+#         pitcher_sho.value = float(0)
+#         pitcher_saves.value = float(7)
+#         pitcher_holds.value = float(0)
+#         pitcher_blown.value = float(0)
+#         pitcher_innings.value = float(1)
+#         pitcher_hits.value = float(0)
+#         pitcher_er.value = float(-1)
+#         pitcher_homeruns.value = float(0)
+#         pitcher_walks.value = float(0)
+#         pitcher_hbp.value = float(0)
+#         pitcher_ks.value = float(1)
         
-    elif scoringtemplate == "Standard ESPN":
-        hitter_hits.value = 0
-        hitter_singles.value = 1
-        hitter_doubles.value = 2
-        hitter_triples.value = 3
-        hitter_homeruns.value = 4
-        hitter_runs.value = 1
-        hitter_rbi.value = 1
-        hitter_walks.value = 1
-        hitter_ks.value = -1
-        hitter_hbp.value = 0
-        hitter_sacfly.value = 0
-        hitter_sachit.value = 0
-        hitter_sb.value = 1
-        hitter_cs.value = 0
-        hitter_ab.value = 0
+#     elif scoringtemplate == "Standard ESPN":
+#         hitter_hits.value = float(0)
+#         hitter_singles.value = float(1)
+#         hitter_doubles.value = float(2)
+#         hitter_triples.value = float(3)
+#         hitter_homeruns.value = float(4)
+#         hitter_runs.value = float(1)
+#         hitter_rbi.value = float(1)
+#         hitter_walks.value = float(1)
+#         hitter_ks.value = float(-1)
+#         hitter_hbp.value = float(0)
+#         hitter_sacfly.value = float(0)
+#         hitter_sachit.value = float(0)
+#         hitter_sb.value = float(1)
+#         hitter_cs.value = float(0)
+#         hitter_ab.value = float(0)
         
-        pitcher_wins.value = 2
-        pitcher_losses.value = -2
-        pitcher_qs.value = 0
-        pitcher_cg.value = 0
-        pitcher_sho.value = 0
-        pitcher_saves.value = 2
-        pitcher_holds.value = 2
-        pitcher_blown.value = 0
-        pitcher_innings.value = 3
-        pitcher_hits.value = -1
-        pitcher_er.value = -2
-        pitcher_homeruns.value = 0
-        pitcher_walks.value = -1
-        pitcher_hbp.value = 0
-        pitcher_ks.value = 1
+#         pitcher_wins.value = float(2)
+#         pitcher_losses.value = float(-2)
+#         pitcher_qs.value = float(0)
+#         pitcher_cg.value = float(0)
+#         pitcher_sho.value = float(0)
+#         pitcher_saves.value = float(2)
+#         pitcher_holds.value = float(2)
+#         pitcher_blown.value = float(0)
+#         pitcher_innings.value = float(3)
+#         pitcher_hits.value = float(-1)
+#         pitcher_er.value = float(-2)
+#         pitcher_homeruns.value = float(0)
+#         pitcher_walks.value = float(-1)
+#         pitcher_hbp.value = float(0)
+#         pitcher_ks.value = float(1)
         
-    elif scoringtemplate == "Fangraphs":
-        hitter_hits.value = 5.6
-        hitter_singles.value = 0
-        hitter_doubles.value = 2.9
-        hitter_triples.value = 5.7
-        hitter_homeruns.value = 9.4
-        hitter_runs.value = 0
-        hitter_rbi.value = 0
-        hitter_walks.value = 3
-        hitter_ks.value = 0
-        hitter_hbp.value = 3
-        hitter_sacfly.value = 0
-        hitter_sachit.value = 0
-        hitter_sb.value = 1.9
-        hitter_cs.value = -2.8
-        hitter_ab.value = -1
+#     elif scoringtemplate == "Fangraphs":
+#         hitter_hits.value = 5.6
+#         hitter_singles.value = float(0)
+#         hitter_doubles.value = 2.9
+#         hitter_triples.value = 5.7
+#         hitter_homeruns.value = 9.4
+#         hitter_runs.value = float(0)
+#         hitter_rbi.value = float(0)
+#         hitter_walks.value = float(3)
+#         hitter_ks.value = float(0)
+#         hitter_hbp.value = float(3)
+#         hitter_sacfly.value = float(0)
+#         hitter_sachit.value = float(0)
+#         hitter_sb.value = 1.9
+#         hitter_cs.value = -2.8
+#         hitter_ab.value = float(-1)
         
-        pitcher_wins.value = 0
-        pitcher_losses.value = 0
-        pitcher_qs.value = 0
-        pitcher_cg.value = 0
-        pitcher_sho.value = 0
-        pitcher_saves.value = 5
-        pitcher_holds.value = 4
-        pitcher_blown.value = 0
-        pitcher_innings.value = 5
-        pitcher_hits.value = 0
-        pitcher_er.value = 0
-        pitcher_homeruns.value = -13
-        pitcher_walks.value = -3
-        pitcher_hbp.value = -3
-        pitcher_ks.value = 2
+#         pitcher_wins.value = float(0)
+#         pitcher_losses.value = float(0)
+#         pitcher_qs.value = float(0)
+#         pitcher_cg.value = float(0)
+#         pitcher_sho.value = float(0)
+#         pitcher_saves.value = float(5)
+#         pitcher_holds.value = float(4)
+#         pitcher_blown.value = float(0)
+#         pitcher_innings.value = float(5)
+#         pitcher_hits.value = float(0)
+#         pitcher_er.value = float(0)
+#         pitcher_homeruns.value = float(-13)
+#         pitcher_walks.value = float(-3)
+#         pitcher_hbp.value = float(-3)
+#         pitcher_ks.value = float(2)
         
-    elif scoringtemplate == "Fangraphs Alt":
-        hitter_hits.value = 5.6
-        hitter_singles.value = 0
-        hitter_doubles.value = 2.9
-        hitter_triples.value = 5.7
-        hitter_homeruns.value = 9.4
-        hitter_runs.value = 0
-        hitter_rbi.value = 0
-        hitter_walks.value = 3
-        hitter_ks.value = 0
-        hitter_hbp.value = 3
-        hitter_sacfly.value = 0
-        hitter_sachit.value = 0
-        hitter_sb.value = 1.9
-        hitter_cs.value = -2.8
-        hitter_ab.value = -1
+#     elif scoringtemplate == "Fangraphs Alt":
+#         hitter_hits.value = 5.6
+#         hitter_singles.value = float(0)
+#         hitter_doubles.value = 2.9
+#         hitter_triples.value = 5.7
+#         hitter_homeruns.value = 9.4
+#         hitter_runs.value = float(0)
+#         hitter_rbi.value = float(0)
+#         hitter_walks.value = float(3)
+#         hitter_ks.value = float(0)
+#         hitter_hbp.value = float(3)
+#         hitter_sacfly.value = float(0)
+#         hitter_sachit.value = float(0)
+#         hitter_sb.value = 1.9
+#         hitter_cs.value = -2.8
+#         hitter_ab.value = float(-1)
         
-        pitcher_wins.value = 0
-        pitcher_losses.value = 0
-        pitcher_qs.value = 0
-        pitcher_cg.value = 0
-        pitcher_sho.value = 0
-        pitcher_saves.value = 5
-        pitcher_holds.value = 4
-        pitcher_blown.value = 0
-        pitcher_innings.value = 7.4
-        pitcher_hits.value = -2.6
-        pitcher_er.value = 0
-        pitcher_homeruns.value = -12.3
-        pitcher_walks.value = -3
-        pitcher_hbp.value = -3
-        pitcher_ks.value = 2
-#------------------------------------------------------------------------------
+#         pitcher_wins.value = float(0)
+#         pitcher_losses.value = float(0)
+#         pitcher_qs.value = float(0)
+#         pitcher_cg.value = float(0)
+#         pitcher_sho.value = float(0)
+#         pitcher_saves.value = float(5)
+#         pitcher_holds.value = float(4)
+#         pitcher_blown.value = float(0)
+#         pitcher_innings.value = 7.4
+#         pitcher_hits.value = -2.6
+#         pitcher_er.value = float(0)
+#         pitcher_homeruns.value = -12.3
+#         pitcher_walks.value = float(-3)
+#         pitcher_hbp.value = float(-3)
+#         pitcher_ks.value = float(2)
+# #------------------------------------------------------------------------------
 
 st.set_page_config(
     page_title="TWTC Scoring System Calculator",
@@ -307,11 +307,11 @@ with p.col8:
     pitcher_blown = st.number_input('BS',value=TWTC_pitching[7],format="%0.1f")
 
 col1,col2 = st.columns(2)
-with col1:
-    scoringtemplate = st.selectbox("Scoring System Templates",
-                               ['2024 TWTC','Standard Fantrax','Standard ESPN','Fangraphs','Fangraphs Alt'],
-                               on_change = lambda: points_template()
-                               )
+# with col1:
+#     scoringtemplate = st.selectbox("Scoring System Templates",
+#                                ['2024 TWTC','Standard Fantrax','Standard ESPN','Fangraphs','Fangraphs Alt'],
+#                                on_change = lambda: points_template()
+#                                )
 with col2:
     recalculate = st.button("Recalculate",
                             on_click = lambda: recalculate_points()
