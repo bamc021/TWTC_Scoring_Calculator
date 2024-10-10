@@ -20,15 +20,15 @@ def recalculate_points():
                          pitcher_ks]
     
     
-    hitpoints = sum(hittingdata[col] * points for col, points in zip(hittingstats, hitting_ptvalues))
-    hittingdata['TWTCpoints'] = sum(hittingdata[col] * points for col, points in zip(hittingstats, TWTC_hitting))
+    hitpoints = sum(hittingstats[col] * points for col, points in zip(hittingstats, hitting_ptvalues))
+    hittingdata['TWTCpoints'] = sum(hittingstats[col] * points for col, points in zip(hittingstats, TWTC_hitting))
     hittingdata['points'] = hitpoints
     hittingdata['pts/g'] = hittingdata['points']/hittingdata['G']
     hittingdata['matchup_pts'] = hittingdata['pts/g']*7
     formattedhitdata = pd.DataFrame(data=hittingdata,columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
 
-    pitchpoints = sum(pitchingdata[col] * points for col, points in zip(pitchingdata, pitching_ptvalues))
-    pitchingdata['TWTCpoints'] = sum(pitchingdata[col] * points for col, points in zip(pitchingstats, TWTC_pitching))
+    pitchpoints = sum(pitchingstats[col] * points for col, points in zip(pitchingstats, pitching_ptvalues))
+    pitchingdata['TWTCpoints'] = sum(pitchingstats[col] * points for col, points in zip(pitchingstats, TWTC_pitching))
     pitchingdata['points'] = pitchpoints
     pitchingdata['pts/g'] = pitchingdata['points']/pitchingdata['G']
     pitchingdata['matchup_pts'] = pitchingdata['pts/g']*1.4
