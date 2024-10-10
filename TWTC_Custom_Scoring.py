@@ -215,7 +215,7 @@ st.set_page_config(
     )
 st.write('Test')
 
-qualitystarts = pd.read_csv('C:/Users/mccol/Documents/Pitchers QS.csv')
+qualitystarts = pd.read_csv('https://raw.githubusercontent.com/bamc021/TWTC_Scoring_Calculator/refs/heads/main/Pitchers%20QS.csv')
 
 finaltable = pd.DataFrame(columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
 
