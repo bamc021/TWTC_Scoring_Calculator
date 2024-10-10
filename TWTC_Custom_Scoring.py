@@ -215,7 +215,7 @@ st.set_page_config(
     )
 st.write('Test')
 
-qualitystarts = pd.read_csv('https://raw.githubusercontent.com/bamc021/TWTC_Scoring_Calculator/refs/heads/main/Pitchers%20QS.csv?token=GHSAT0AAAAAACYVJR3SDL23TV3T5NWLDNTKZYIK5JQ')
+qualitystarts = pd.read_csv('C:/Users/mccol/Documents/Pitchers QS.csv')
 
 finaltable = pd.DataFrame(columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
 
@@ -281,7 +281,7 @@ with p.col1:
 
 with p.col2:
     pitcher_losses = st.number_input('L',value=TWTC_pitching[1],format="%0.1f")
-    pitcher_hits = st.number_input('H',value=TWTC_pitching[9],format="%0.1f")
+    pitcher_hits = st.number_input('h',value=TWTC_pitching[9],format="%0.1f")
 
 with p.col3:
     pitcher_qs = st.number_input('QS',value=TWTC_pitching[2],format="%0.1f")
@@ -289,15 +289,15 @@ with p.col3:
 
 with p.col4:
     pitcher_cg = st.number_input('CG',value=TWTC_pitching[3],format="%0.1f")
-    pitcher_homeruns = st.number_input('HR',value=TWTC_pitching[11],format="%0.1f")
+    pitcher_homeruns = st.number_input('hr',value=TWTC_pitching[11],format="%0.1f")
 
 with p.col5:
     pitcher_sho = st.number_input('SHO',value=TWTC_pitching[4],format="%0.1f")
-    pitcher_walks = st.number_input('BB',value=TWTC_pitching[12],format="%0.1f")
+    pitcher_walks = st.number_input('bb',value=TWTC_pitching[12],format="%0.1f")
 
 with p.col6:
     pitcher_saves = st.number_input('SV',value=TWTC_pitching[5],format="%0.1f")
-    pitcher_hbp = st.number_input('HBP',value=TWTC_pitching[13],format="%0.1f")
+    pitcher_hbp = st.number_input('hbp',value=TWTC_pitching[13],format="%0.1f")
 
 with p.col7:
     pitcher_holds = st.number_input('HLD',value=TWTC_pitching[6],format="%0.1f")
