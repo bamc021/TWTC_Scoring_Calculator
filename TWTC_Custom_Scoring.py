@@ -19,13 +19,26 @@ def recalculate_points():
                          pitcher_blown,pitcher_innings,pitcher_hits,pitcher_er,pitcher_homeruns,pitcher_walks,pitcher_hbp,
                          pitcher_ks]
     
-    hittingdata['points'] = sum(hittingdata[col] * points for col, points in zip(hittingstats, hitting_ptvalues))
+    hitpoints = sum(hittingdata[col] * points for col, points in zip(hittingstats, hitting_ptvalues))
+    hittingdata['TWTCpoints'] = sum(hittingdata[col] * points for col, points in zip(hittingstats, TWTC_hitting))
+    hittingdata['points'] = hitpoints
     hittingdata['pts/g'] = hittingdata['points']/hittingdata['G']
     hittingdata['matchup_pts'] = hittingdata['pts/g']*7
+    formattedhitdata = pd.DataFrame(data=hittingdata,columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
 
-    pitchingdata['points'] = sum(pitchingdata[col] * points for col, points in zip(pitchingstats, pitching_ptvalues))
+    pitchpoints = sum(pitchingdata[col] * points for col, points in zip(pitchingdata, pitching_ptvalues))
+    pitchingdata['TWTCpoints'] = sum(pitchingdata[col] * points for col, points in zip(pitchingstats, TWTC_pitching))
+    pitchingdata['points'] = pitchpoints
     pitchingdata['pts/g'] = pitchingdata['points']/pitchingdata['G']
     pitchingdata['matchup_pts'] = pitchingdata['pts/g']*1.4
+    formattedpitchdata = pd.DataFrame(data=pitchingdata,columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
+    
+    finaltable = pd.concat([formattedhitdata,formattedpitchdata])
+    finaltable['ptsdiff'] = finaltable['points']-finaltable['TWTCpoints']
+    finaltable['Rank'] = finaltable['points'].rank(method='min',ascending=False)
+    finaltable['TWTCRank'] = finaltable['TWTCpoints'].rank(method='min',ascending=False)
+    finaltable['rank_diff'] = finaltable['Rank']-finaltable['TWTCRank']
+    
 #------------------------------------------------------------------------------
 
 #-----------Function to assign point values based on chosen template-----------
@@ -204,6 +217,8 @@ st.write('Test')
 
 qualitystarts = pd.read_csv('C:/Users/mccol/Documents/Pitchers QS.csv')
 
+finaltable = pd.DataFrame(columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
+
 pitchingdata = pitching_stats(2024,qual=1)
 hittingdata = batting_stats(2024,qual=1)
 
@@ -302,3 +317,4 @@ with col2:
                             on_click = lambda: recalculate_points()
                             )
 
+pointstable = st.dataframe(finaltable)
