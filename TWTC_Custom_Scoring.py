@@ -19,10 +19,8 @@ def recalculate_points():
     mlbstats['TWTCpoints'] = sum(mlbstats[col] * points for col, points in zip(pts_stats, TWTC_pts))
     mlbstats['points'] = calculatedpts
     mlbstats['pts/g'] = mlbstats['points']/mlbstats['G']
-    if mlbstats['AB'] > 0:
-        mlbstats['matchup_pts'] = mlbstats['pts/g']*7
-    else:
-        mlbstats['matchup_pts'] = mlbstats['pts/g']*1.4
+    mlbstats['matchup_pts'] = mlbstats.apply(lambda row: row['pts/g'] * 1.4 if row['AB'] == 0 else row['pts/g'] * 7, axis=1)
+
     
     finaltable = pd.DataFrame(data=mlbstats,columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
     finaltable['ptsdiff'] = finaltable['points']-finaltable['TWTCpoints']
