@@ -206,7 +206,7 @@ st.set_page_config(
     )
 
 # mlbstats = pd.read_csv('https://raw.githubusercontent.com/bamc021/TWTC_Scoring_Calculator/refs/heads/main/Pitchers%20QS.csv')
-mlbstats = pd.read_csv("C:/Users/mccol/Fantasy Baseball Web Apps/2024_MLB_Stats.csv")
+mlbstats = pd.read_csv("https://raw.githubusercontent.com/bamc021/TWTC_Scoring_Calculator/refs/heads/main/2024_MLB_Stats.csv")
 
 finaltable = pd.DataFrame(columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
 
