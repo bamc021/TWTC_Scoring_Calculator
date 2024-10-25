@@ -216,69 +216,69 @@ h = st.container(border=True)
 h.header("Hitting",divider="green")
 h.col1,h.col2,h.col3,h.col4,h.col5,h.col6,h.col7,h.col8 = h.columns(8)
 with h.col1:
-    hitter_hits = st.number_input('H',value=TWTC_pts[16],format="%0.1f")
-    hitter_ks = st.number_input('K',value=TWTC_pts[24],format="%0.1f")
+    hitter_hits = st.number_input('H',value=TWTC_pts[16],format="%0.1f",step=1)
+    hitter_ks = st.number_input('K',value=TWTC_pts[24],format="%0.1f",step=1)
 
 with h.col2:
-    hitter_singles = st.number_input('1B',value=TWTC_pts[17],format="%0.1f")
-    hitter_hbp = st.number_input('HBP',value=TWTC_pts[25],format="%0.1f")
+    hitter_singles = st.number_input('1B',value=TWTC_pts[17],format="%0.1f",step=1)
+    hitter_hbp = st.number_input('HBP',value=TWTC_pts[25],format="%0.1f",step=1)
 
 with h.col3:
-    hitter_doubles = st.number_input('2B',value=TWTC_pts[18],format="%0.1f")
-    hitter_sacfly = st.number_input('SF',value=TWTC_pts[26],format="%0.1f")
+    hitter_doubles = st.number_input('2B',value=TWTC_pts[18],format="%0.1f",step=1)
+    hitter_sacfly = st.number_input('SF',value=TWTC_pts[26],format="%0.1f",step=1)
 
 with h.col4:
-    hitter_triples = st.number_input('3B',value=TWTC_pts[19],format="%0.1f")
-    hitter_sachit = st.number_input('SH',value=TWTC_pts[27],format="%0.1f")
+    hitter_triples = st.number_input('3B',value=TWTC_pts[19],format="%0.1f",step=1)
+    hitter_sachit = st.number_input('SH',value=TWTC_pts[27],format="%0.1f",step=1)
 
 with h.col5:
-    hitter_homeruns = st.number_input('HR',value=TWTC_pts[20],format="%0.1f")
-    hitter_sb = st.number_input('SB',value=TWTC_pts[28],format="%0.1f")
+    hitter_homeruns = st.number_input('HR',value=TWTC_pts[20],format="%0.1f",step=1)
+    hitter_sb = st.number_input('SB',value=TWTC_pts[28],format="%0.1f",step=1)
 
 with h.col6:
-    hitter_runs = st.number_input('R',value=TWTC_pts[21],format="%0.1f")
-    hitter_cs = st.number_input('CS',value=TWTC_pts[29],format="%0.1f")
+    hitter_runs = st.number_input('R',value=TWTC_pts[21],format="%0.1f",step=1)
+    hitter_cs = st.number_input('CS',value=TWTC_pts[29],format="%0.1f",step=1)
 
 with h.col7:
-    hitter_rbi = st.number_input('RBI',value=TWTC_pts[22],format="%0.1f")
-    hitter_ab = st.number_input('AB',value=TWTC_pts[15],format="%0.1f")
+    hitter_rbi = st.number_input('RBI',value=TWTC_pts[22],format="%0.1f",step=1)
+    hitter_ab = st.number_input('AB',value=TWTC_pts[15],format="%0.1f",step=1)
 
 with h.col8:
-    hitter_walks = st.number_input('BB',value=TWTC_pts[23],format="%0.1f")
+    hitter_walks = st.number_input('BB',value=TWTC_pts[23],format="%0.1f",step=1)
     
 p = st.container(border=True)
 p.header("Pitching",divider="green")
 p.col1,p.col2,p.col3,p.col4,p.col5,p.col6,p.col7,p.col8 = p.columns(8)
 with p.col1:
-    pitcher_wins = st.number_input('W',value=TWTC_pts[0],format="%0.1f")
-    pitcher_innings = st.number_input('IP',value=TWTC_pts[8],format="%0.1f")
+    pitcher_wins = st.number_input('W',value=TWTC_pts[0],format="%0.1f",step=1)
+    pitcher_innings = st.number_input('IP',value=TWTC_pts[8],format="%0.1f",step=1)
 
 with p.col2:
-    pitcher_losses = st.number_input('L',value=TWTC_pts[1],format="%0.1f")
-    pitcher_hits = st.number_input('h',value=TWTC_pts[9],format="%0.1f")
+    pitcher_losses = st.number_input('L',value=TWTC_pts[1],format="%0.1f",step=1)
+    pitcher_hits = st.number_input('h',value=TWTC_pts[9],format="%0.1f",step=1)
 
 with p.col3:
-    pitcher_qs = st.number_input('QS',value=TWTC_pts[2],format="%0.1f")
-    pitcher_er = st.number_input('ER',value=TWTC_pts[10],format="%0.1f")
+    pitcher_qs = st.number_input('QS',value=TWTC_pts[2],format="%0.1f",step=1)
+    pitcher_er = st.number_input('ER',value=TWTC_pts[10],format="%0.1f",step=1)
 
 with p.col4:
-    pitcher_cg = st.number_input('CG',value=TWTC_pts[3],format="%0.1f")
-    pitcher_homeruns = st.number_input('hr',value=TWTC_pts[11],format="%0.1f")
+    pitcher_cg = st.number_input('CG',value=TWTC_pts[3],format="%0.1f",step=1)
+    pitcher_homeruns = st.number_input('hr',value=TWTC_pts[11],format="%0.1f",step=1)
 
 with p.col5:
-    pitcher_sho = st.number_input('SHO',value=TWTC_pts[4],format="%0.1f")
-    pitcher_walks = st.number_input('bb',value=TWTC_pts[12],format="%0.1f")
+    pitcher_sho = st.number_input('SHO',value=TWTC_pts[4],format="%0.1f",step=1)
+    pitcher_walks = st.number_input('bb',value=TWTC_pts[12],format="%0.1f",step=1)
 
 with p.col6:
-    pitcher_saves = st.number_input('SV',value=TWTC_pts[5],format="%0.1f")
-    pitcher_hbp = st.number_input('hbp',value=TWTC_pts[13],format="%0.1f")
+    pitcher_saves = st.number_input('SV',value=TWTC_pts[5],format="%0.1f",step=1)
+    pitcher_hbp = st.number_input('hbp',value=TWTC_pts[13],format="%0.1f",step=1)
 
 with p.col7:
-    pitcher_holds = st.number_input('HLD',value=TWTC_pts[6],format="%0.1f")
-    pitcher_ks = st.number_input('SO',value=TWTC_pts[14],format="%0.1f")
+    pitcher_holds = st.number_input('HLD',value=TWTC_pts[6],format="%0.1f",step=1)
+    pitcher_ks = st.number_input('SO',value=TWTC_pts[14],format="%0.1f",step=1)
 
 with p.col8:
-    pitcher_blown = st.number_input('BS',value=TWTC_pts[7],format="%0.1f")
+    pitcher_blown = st.number_input('BS',value=TWTC_pts[7],format="%0.1f",step=1)
 
 col1,col2 = st.columns(2)
 with col1:
