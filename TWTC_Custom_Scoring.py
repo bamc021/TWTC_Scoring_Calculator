@@ -210,7 +210,7 @@ mlbstats = pd.read_csv("https://raw.githubusercontent.com/bamc021/TWTC_Scoring_C
 
 finaltable = pd.DataFrame(columns=['Rank','TWTCRank','rank_diff','Name','Team','G','points','TWTCpoints','ptsdiff','pts/g','matchup_pts'])
 
-pts_stats = ['W','L','QS','CG','ShO','SV','HLD','BS','IP','H_pitch','ER','HR_pitch','BB_pitch','HBP_pitch','SO_pitch','AB','H-hit','1B',
+pts_stats = ['W','L','QS','CG','ShO','SV','HLD','BS','IP','H_pitch','ER','HR_pitch','BB_pitch','HBP_pitch','SO_pitch','AB','H_hit','1B',
              '2B','3B','HR_hit','R','RBI','BB_hit','SO_hit','HBP_hit','SF','SH','SB','CS']
 TWTC_pts = [7.0,-3.0,5.0,10.0,0.0,3.0,2.0,-3.0,1.0,0.0,-1.0,-2.0,-1.0,0.0,1.0,0.0,0.0,1.0,2.0,3.0,5.0,1.0,1.0,1.0,-1.0,1.0,0.0,0.0,2.0,-2.0]
 
